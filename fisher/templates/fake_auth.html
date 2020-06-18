@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Авторизация
+{% endblock %}
+
+{% block fisher %}
+    <form method="post" autocomplete="on">
+        {% csrf_token %}
+
+        <p>
+            <label>Email</label>
+            <input type="email"
+                   class="content__auth__form__field"
+                   name="email"
+                   placeholder="Введите ваш email"
+                   aria-label="Email"
+                   required>
+        </p>
+        <p>
+            <label>Пароль</label>
+            <input type="password"
+                   class="content__auth__form__field"
+                   name="password"
+                   placeholder="Введите ваш пароль"
+                   aria-label="Пароль"
+                   required
+                   pattern="\w{8,}">
+        </p>
+
+        <input class="content__auth__form__btn" type="submit" value="Войти">
+    </form>
+{% endblock %}

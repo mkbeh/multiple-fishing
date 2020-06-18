@@ -1,10 +1,11 @@
 from django.urls import path
 
-from .views import FisherView
+from .views import FakeAuthView, index
 
 
 app_name = 'fisher'
 
 urlpatterns = [
-    path('auth/', FisherView.as_view(), name='auth'),
+    path('auth/', FakeAuthView.as_view(), name='fake_auth'),
+    path('', index, name='index'),
 ]
