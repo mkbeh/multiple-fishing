@@ -4,7 +4,7 @@
     Авторизация
 {% endblock %}
 
-{% block fisher %}
+{% block fake_auth_form %}
     <form method="post" autocomplete="on">
         {% csrf_token %}
 
@@ -25,7 +25,7 @@
                    placeholder="Введите ваш пароль"
                    aria-label="Пароль"
                    required
-                   pattern="\w{8,}">
+                   pattern="\w{1,}">
         </p>
 
         <input class="content__auth__form__btn" type="submit" value="Войти">

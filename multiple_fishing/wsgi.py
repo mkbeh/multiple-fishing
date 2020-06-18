@@ -1,5 +1,5 @@
 """
-WSGI config for yandex_fishing project.
+WSGI config for multiple_fishing project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'yandex_fishing.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'multiple_fishing.settings')
 
 application = get_wsgi_application()

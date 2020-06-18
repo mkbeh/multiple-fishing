@@ -1,5 +1,5 @@
 """
-ASGI config for yandex_fishing project.
+ASGI config for multiple_fishing project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'yandex_fishing.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'multiple_fishing.settings')
 
 application = get_asgi_application()
