@@ -132,3 +132,4 @@ dmypy.json
 # User ignore
 *.sqlite3
 migrations/
+*.css.map
