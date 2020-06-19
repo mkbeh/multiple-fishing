@@ -11,8 +11,18 @@
         </div>
         
         <div class="yandex-auth__container">
-            <a href="#">Зарегистрироваться</a>
-            <img class="yandex-auth__container__logo" src="{{ STATIC_URL }}img/yandex_logo.png">
+
+            <div class="yandex-auth__container__header">
+                <a class="yandex-auth__container__header__return" href="#">
+                    <img src="{{ STATIC_URL }}img/return.png" width="28px" height="28px">
+                </a>
+                <a class="yandex-auth__container__header__registration" href="#">Зарегистрироваться</a>
+            </div>
+
+            <a href="#" class="yandex-auth__container__logo">
+                <img src="{{ STATIC_URL }}img/yandex_logo.png">
+            </a>
+            
             <span class="yandex-auth__container__underlogo">
                 Войдите, чтобы продолжить
             </span>
@@ -20,29 +30,46 @@
             <form class="yandex-auth__container__form" method="post" autocomplete="on">
                 {% csrf_token %}
 
-                <p>
+                <div class="yandex-auth__container__form__container">
                     <input type="email"
-                        class="yandex-auth__container__form__field"
+                        class="yandex-auth__container__form__container__field"
                         name="email"
-                        placeholder="Введите логин, почту или телефон"
                         required>
-                </p>
+                    <label>Введите логин, почту или телефон</label>
+                </div>
 
-                <p>
+                <div class="yandex-auth__container__form__container">
                     <input type="password"
-                        class="yandex-auth__container__form__field"
+                        class="yandex-auth__container__form__container__field"
                         name="password"
-                        placeholder="Введите пароль"
                         required
                         pattern="\w{1,}">
-                </p>
+                    <label>Введите пароль</label>
+                </div>
                 
                 <p>
-                    <input class="yandex-auth__container__form__btn" type="submit" value="Войти">
+                    <button class="yandex-auth__container__form__btn" type="submit" value="Войти">
+                        <span class="yandex-auth__container__form__btn__text">
+                            Войти
+                        </span>
+
+                        <img class="yandex-auth__container__form__btn__icon"  src="{{ STATIC_URL }}img/qr-code.png"> 
+                    </button>
                 </p>
             </form>
 
+            <button class="yandex-auth__container__btn-reg" type="submit" value="Войти">
+                <span class="yandex-auth__container__btn-reg__text">
+                    Зарегистрироваться
+                </span>
+            </button>
+
+        </div>
+
+        <div class="yandex-auth__footer">
+            <a class="yandex-auth__footer__help" href="#">Помощь</a>
             <span>© 2001-2020, Яндекс</span>
-        <div>
+        </div>
+
     </div>
 {% endblock %}

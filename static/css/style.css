@@ -343,14 +343,48 @@ template {
 
 @media screen {
   .yandex-auth {
-    padding: 10vh 10vw;
+    min-height: 100%;
+    padding: 0 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .yandex-auth__bg-image {
     display: none;
   }
+  .yandex-auth__container {
+    padding-top: 25px;
+  }
+  .yandex-auth__container__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 15px;
+  }
+  .yandex-auth__container__header__return {
+    opacity: .3;
+  }
+  .yandex-auth__container__header__return:hover {
+    opacity: .7;
+  }
   .yandex-auth__container__logo {
-    margin: 0;
-    padding: 0;
+    font-size: 0;
+    margin-left: 10px;
+  }
+  .yandex-auth__container__logo img {
     width: 100px;
     height: 55px;
   }
@@ -358,18 +392,99 @@ template {
     font-weight: 400;
     font-size: 16px;
     float: left;
+    margin-left: 10px;
+    margin-bottom: 50px;
   }
-  .yandex-auth__container__form p .yandex-auth__container__form__field {
+  .yandex-auth__container__form {
+    display: inline-block;
     width: 100%;
-    padding: 0;
+    max-width: 300px;
+  }
+  .yandex-auth__container__form__container {
+    padding-top: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .yandex-auth__container__form__container__field {
+    width: 100%;
+    padding: 7px 0;
     border: none;
     border-bottom: 1px solid gray;
   }
+  .yandex-auth__container__form__container__field:focus {
+    outline: none;
+    border: solid #ffdb4d;
+    border-width: 0 0 2px;
+    font-size: 16px;
+  }
+  .yandex-auth__container__form__container label {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    -webkit-transform: translateY(25px);
+            transform: translateY(25px);
+    pointer-events: none;
+    font-size: 16px;
+    color: #999999;
+  }
+  .yandex-auth__container__form__container input:focus + label {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+    margin-left: -25px;
+  }
   .yandex-auth__container__form p .yandex-auth__container__form__btn {
     width: 100%;
+    max-width: 300px;
+    height: 48px;
+    border-radius: 3px;
+    padding: 5px 0;
     background-color: #FFDB4D;
     border: none;
-    padding: 10px 0;
+  }
+  .yandex-auth__container__form p .yandex-auth__container__form__btn__text {
+    font-weight: 600;
+    padding-left: 30px;
+  }
+  .yandex-auth__container__form p .yandex-auth__container__form__btn__icon {
+    float: right;
+    padding-right: 10px;
+    width: 15px;
+    height: 15px;
+  }
+  .yandex-auth__container__btn-reg {
+    width: 100%;
+    max-width: 300px;
+    height: 48px;
+    border-radius: 3px;
+    padding: 5px 0;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .yandex-auth__container__btn-reg__text {
+    font-weight: 600;
+  }
+  .yandex-auth__footer {
+    width: 80vw;
+    margin-bottom: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .yandex-auth__footer__help {
+    margin-right: 20px;
+    color: black;
   }
 }
 
@@ -377,4 +492,12 @@ template {
   font-family: "YS Text Regular";
   font-weight: 500;
   font-size: 14px;
+}
+
+html, body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
 }
