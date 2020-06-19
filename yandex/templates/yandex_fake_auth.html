@@ -10,29 +10,39 @@
             ...
         </div>
         
-        <form class="yandex-auth__form" method="post" autocomplete="on">
-            {% csrf_token %}
+        <div class="yandex-auth__container">
+            <a href="#">Зарегистрироваться</a>
+            <img class="yandex-auth__container__logo" src="{{ STATIC_URL }}img/yandex_logo.png">
+            <span class="yandex-auth__container__underlogo">
+                Войдите, чтобы продолжить
+            </span>
 
-            <p>
-                <input type="email"
-                    class="yandex-auth__form__field"
-                    name="email"
-                    placeholder="Введите логин, почту или телефон"
-                    required>
-            </p>
+            <form class="yandex-auth__container__form" method="post" autocomplete="on">
+                {% csrf_token %}
 
-            <p>
-                <input type="password"
-                    class="yandex-auth__form__field"
-                    name="password"
-                    placeholder="Введите пароль"
-                    required
-                    pattern="\w{1,}">
-            </p
-            
-            <p>
-                <input class="content__auth__form__btn" type="submit" value="Войти">
-            </p>
-        </form>
+                <p>
+                    <input type="email"
+                        class="yandex-auth__container__form__field"
+                        name="email"
+                        placeholder="Введите логин, почту или телефон"
+                        required>
+                </p>
+
+                <p>
+                    <input type="password"
+                        class="yandex-auth__container__form__field"
+                        name="password"
+                        placeholder="Введите пароль"
+                        required
+                        pattern="\w{1,}">
+                </p>
+                
+                <p>
+                    <input class="yandex-auth__container__form__btn" type="submit" value="Войти">
+                </p>
+            </form>
+
+            <span>© 2001-2020, Яндекс</span>
+        <div>
     </div>
 {% endblock %}

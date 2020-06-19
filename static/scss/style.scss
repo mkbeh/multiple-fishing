@@ -1,2 +1,9 @@
-@import "normalize.css";
+@import "normalize.scss";
 @import "yandex/fake_auth.scss";
+
+
+* {
+    font-family: "YS Text Regular";
+    font-weight: 500;
+    font-size: 14px;
+  }

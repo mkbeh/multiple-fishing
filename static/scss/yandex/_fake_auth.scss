@@ -1,0 +1,48 @@
+
+@media screen {
+    .yandex-auth {
+        padding: 10vh 10vw;
+
+
+        &__bg-image {
+            display: none;
+        }
+        
+        &__container {
+
+            &__logo {
+                margin: 0;
+                padding: 0;
+                width: 100px;
+                height: 55px;
+            }
+
+            &__underlogo {
+                font-weight: 400;
+                font-size: 16px;
+                float: left;
+            }
+
+            &__form {
+                
+                & p {
+    
+                    .yandex-auth__container__form__field {
+                        width: 100%;
+                        padding: 0;
+                        border: none;
+                        border-bottom: 1px solid gray;
+                    }
+
+                    .yandex-auth__container__form__btn {
+                        width: 100%;
+                        background-color: #FFDB4D;
+                        border: none;
+                        padding: 10px 0;
+                    }
+                }
+            }
+        }
+        
+    }
+}
