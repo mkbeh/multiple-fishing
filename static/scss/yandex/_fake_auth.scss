@@ -72,10 +72,13 @@
                         padding: 7px 0;
                         border: none;
                         border-bottom: 1px solid gray;
+
+                        box-shadow: none;
+                        outline: none;
                     }
 
                     &__field:focus {
-                        outline: none;
+                        
                         border: solid #ffdb4d;
                         border-width: 0 0 2px;
                         font-size: 16px;
