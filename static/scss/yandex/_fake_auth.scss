@@ -1,7 +1,6 @@
 
 @mixin button() {
     width: 100%;
-    max-width: 300px;
     height: 48px;
     border-radius: 3px;
     padding: 5px 0;
@@ -11,7 +10,6 @@
 @media screen {
     .yandex-auth {
         min-height: 100%;
-        padding: 0 25px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -21,23 +19,28 @@
             display: none;
 
             // @media screen and (min-width: 640px) {
-                
+            //     display: block;
+            //     position: absolute;
+            //     z-index: 1;
             // }
         }
         
         &__container {
-            width: 100%;
+            background-color: whitesmoke;
             max-width: 360px;
-
+            z-index: 10;
             padding-top: 25px;
+            padding-bottom: 25px;
+            padding: 25px 0;
             
             &__header {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                width: 100%
-                max-width: 300px;
-                margin-bottom: 15px;
+                width: 90%;
+                margin: 0 auto;
+                padding-bottom: 15px;
+                
 
                 &__return {
                     opacity: .3;
@@ -50,7 +53,7 @@
             
             &__logo {
                 font-size: 0;
-                margin-left: 10px;
+                margin-left: calc(5% + 10px);
 
                 & img {
                     width: 100px;
@@ -62,94 +65,101 @@
                 font-weight: 400;
                 font-size: 16px;
 
-                margin-left: 10px;
+                margin-left: calc(5% + 10px);
                 margin-block-start: 0;
                 margin-block-end: 30px;
             }
+            
+            & div {
+                width: 90%;
+                margin: 0 auto;
 
-            &__form {
-                display: inline-block;
-                width: 100%;
-                max-width: 300px;
-                
-                &__container {
-                    display: flex;
-                    flex-direction: column;
-    
-                    &__field {
+                .yandex-auth__container__form {
+                    width: 100%;
+                    display: inline-block;
+                    
+                    &__container {
+                        display: flex;
+                        flex-direction: column;
                         width: 100%;
-                        padding: 7px 0;
-                        border: none;
-                        border-bottom: 1px solid rgba(0,0,0,.2);
-
-                        box-shadow: none;
-                        outline: none;
+        
+                        &__field {
+                            padding: 7px 0;
+                            border: none;
+                            border-bottom: 1px solid rgba(0,0,0,.2);
+    
+                            box-shadow: none;
+                            outline: none;
+                        }
+    
+                        &__field:focus {
+                            border: solid #ffdb4d;
+                            border-width: 0 0 2px;
+                            font-size: 16px;
+                        }
+    
+                        & label {
+                            order: -1;
+                            transition: all 0.3s ease-in;
+                            transform: translateY(25px);
+                            pointer-events: none;
+                            font-size: 16px;
+                            color: #999999;
+                        }
+    
+                        & input:focus + label {
+                            transform: translate(-23px, -1px) scale(.85);
+                        }
+    
+                        &__forgot-login {
+                            margin-top: 5px;
+                        }
                     }
-
-                    &__field:focus {
-                        border: solid #ffdb4d;
-                        border-width: 0 0 2px;
-                        font-size: 16px;
-                    }
-
-                    & label {
-                        order: -1;
-                        transition: all 0.3s ease-in;
-                        transform: translateY(25px);
-                        pointer-events: none;
-                        font-size: 16px;
-                        color: #999999;
-                    }
-
-                    & input:focus + label {
-                        transform: translate(-23px, -1px) scale(.85);
-                    }
-
-                    &__forgot-login {
-                        margin-top: 5px;
+    
+                    & p {
+                        .yandex-auth__container__form__btn {
+                            @include button();
+                            background-color: #FFDB4D;
+                            border: none;
+                            margin-top: 10px;
+    
+                            &__text {
+                                font-weight: 600;
+                                padding-left: 30px;
+                            }
+    
+                            &__icon {
+                                float: right;
+                                padding-right: 10px;
+                                width: 15px;
+                                height: 15px;
+                            }
+                        }
                     }
                 }
-
-                & p {
-                    .yandex-auth__container__form__btn {
-                        @include button();
-                        background-color: #FFDB4D;
-                        border: none;
-                        margin-top: 10px;
-
-                        &__text {
-                            font-weight: 600;
-                            padding-left: 30px;
-                        }
-
-                        &__icon {
-                            float: right;
-                            padding-right: 10px;
-                            width: 15px;
-                            height: 15px;
-                        }
+    
+                .yandex-auth__container__btn-reg {
+                    @include button();
+                    background-color: transparent;
+                    border: 1px solid rgba(0,0,0,.2);
+    
+                    &__text {
+                        font-weight: 600;
                     }
                 }
             }
-
-            &__btn-reg {
-                @include button();
-                background-color: transparent;
-                border: 1px solid rgba(0,0,0,.2);
-
-                &__text {
-                    font-weight: 600;
-                }
-            }
-
+            
             &__social {
                 margin-top: 35px;
-                margin-bottom: 20px;
                 color: rgba(0, 0, 0, 0.4);
+                width: 100%;
+                margin: auto;
 
                 &__icons {
+                    width: 100%;
                     display: flex;
                     align-content: center;
+                    float: left;
                     
                     & a {
                         border: 1px solid rgba(0,0,0,.2);
@@ -176,7 +186,7 @@
                 color: black;
             }
 
-            &__help:hover, &__help:visited {color: black}
+            &__help:hover, &__help:visited {color: black;}
         }
     }
 }
