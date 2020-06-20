@@ -360,6 +360,8 @@ template {
     display: none;
   }
   .yandex-auth__container {
+    width: 100%;
+    max-width: 360px;
     padding-top: 25px;
   }
   .yandex-auth__container__header {
@@ -372,6 +374,7 @@ template {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    max-width: 300px;
     margin-bottom: 15px;
   }
   .yandex-auth__container__header__return {
@@ -391,9 +394,11 @@ template {
   .yandex-auth__container__underlogo {
     font-weight: 400;
     font-size: 16px;
-    float: left;
     margin-left: 10px;
-    margin-bottom: 30px;
+    -webkit-margin-before: 0;
+            margin-block-start: 0;
+    -webkit-margin-after: 30px;
+            margin-block-end: 30px;
   }
   .yandex-auth__container__form {
     display: inline-block;
@@ -476,6 +481,7 @@ template {
   }
   .yandex-auth__container__social {
     margin-top: 35px;
+    margin-bottom: 20px;
     color: rgba(0, 0, 0, 0.4);
   }
   .yandex-auth__container__social__icons {
