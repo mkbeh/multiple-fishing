@@ -26,12 +26,12 @@
         }
         
         &__container {
-            background-color: whitesmoke;
+            background-color: white;
             max-width: 360px;
             z-index: 10;
             padding-top: 25px;
             padding-bottom: 25px;
-            padding: 25px 0;
+            padding: 25px 15px;
             
             &__header {
                 display: flex;
@@ -150,10 +150,9 @@
             }
             
             &__social {
-                margin-top: 35px;
                 color: rgba(0, 0, 0, 0.4);
                 width: 100%;
-                margin: auto;
+                padding-top: 25px;
 
                 &__icons {
                     width: 100%;

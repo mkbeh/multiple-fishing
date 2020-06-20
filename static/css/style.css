@@ -359,12 +359,12 @@ template {
     display: none;
   }
   .yandex-auth__container {
-    background-color: whitesmoke;
+    background-color: white;
     max-width: 360px;
     z-index: 10;
     padding-top: 25px;
     padding-bottom: 25px;
-    padding: 25px 0;
+    padding: 25px 15px;
   }
   .yandex-auth__container__header {
     display: -webkit-box;
@@ -484,10 +484,9 @@ template {
     font-weight: 600;
   }
   .yandex-auth__container__social {
-    margin-top: 35px;
     color: rgba(0, 0, 0, 0.4);
     width: 100%;
-    margin: auto;
+    padding-top: 25px;
   }
   .yandex-auth__container__social__icons {
     width: 100%;
