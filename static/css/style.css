@@ -525,7 +525,6 @@ template {
     display: none;
   }
   .yandex-auth__footer {
-    width: 80vw;
     margin-bottom: 25px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -552,6 +551,7 @@ template {
 
 html, body {
   height: 100%;
+  overflow: hidden;
 }
 
 a {
