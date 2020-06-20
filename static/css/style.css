@@ -413,7 +413,7 @@ template {
     width: 100%;
     padding: 7px 0;
     border: none;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: none;
             box-shadow: none;
     outline: none;
@@ -477,6 +477,21 @@ template {
   .yandex-auth__container__social {
     margin-top: 35px;
     color: rgba(0, 0, 0, 0.4);
+  }
+  .yandex-auth__container__social__icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .yandex-auth__container__social__icons a {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 6px;
+    margin-right: 7px;
+  }
+  .yandex-auth__container__social__icons a:nth-last-child(-n+3) {
+    display: none;
   }
   .yandex-auth__footer {
     width: 80vw;
