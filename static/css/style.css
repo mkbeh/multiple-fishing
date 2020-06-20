@@ -474,6 +474,10 @@ template {
   .yandex-auth__container__btn-reg__text {
     font-weight: 600;
   }
+  .yandex-auth__container__social {
+    margin-top: 35px;
+    color: rgba(0, 0, 0, 0.4);
+  }
   .yandex-auth__footer {
     width: 80vw;
     margin-bottom: 25px;
@@ -486,6 +490,9 @@ template {
   }
   .yandex-auth__footer__help {
     margin-right: 20px;
+    color: black;
+  }
+  .yandex-auth__footer__help:hover, .yandex-auth__footer__help:visited {
     color: black;
   }
 }

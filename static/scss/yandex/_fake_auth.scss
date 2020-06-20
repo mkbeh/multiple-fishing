@@ -131,6 +131,11 @@
                     font-weight: 600;
                 }
             }
+
+            &__social {
+                margin-top: 35px;
+                color: rgba(0, 0, 0, 0.4)
+            }
         }
         
         &__footer {
@@ -143,6 +148,8 @@
                 margin-right: 20px;
                 color: black;
             }
+
+            &__help:hover, &__help:visited {color: black}
         }
     }
 }
