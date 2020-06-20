@@ -18,7 +18,9 @@
         &__bg-image {
             display: none;
 
-            @media screen and (min-width: 640px) {
+            @media screen and (min-width: 1024px) {
+                // also add lower resolution (orient album)
+
                 display: block;
                 position: absolute;
                 z-index: 1;

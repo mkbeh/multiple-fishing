@@ -360,7 +360,7 @@ template {
   }
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 1024px) {
   .yandex-auth__bg-image {
     display: block;
     position: absolute;
