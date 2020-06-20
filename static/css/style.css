@@ -393,7 +393,7 @@ template {
     font-size: 16px;
     float: left;
     margin-left: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   .yandex-auth__container__form {
     display: inline-block;
@@ -401,7 +401,6 @@ template {
     max-width: 300px;
   }
   .yandex-auth__container__form__container {
-    padding-top: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -437,8 +436,11 @@ template {
     color: #999999;
   }
   .yandex-auth__container__form__container input:focus + label {
-    -webkit-transform: translate(-25px, -1px) scale(0.85);
-            transform: translate(-25px, -1px) scale(0.85);
+    -webkit-transform: translate(-23px, -1px) scale(0.85);
+            transform: translate(-23px, -1px) scale(0.85);
+  }
+  .yandex-auth__container__form__container__forgot-login {
+    margin-top: 5px;
   }
   .yandex-auth__container__form p .yandex-auth__container__form__btn {
     width: 100%;
@@ -448,6 +450,7 @@ template {
     padding: 5px 0;
     background-color: #FFDB4D;
     border: none;
+    margin-top: 10px;
   }
   .yandex-auth__container__form p .yandex-auth__container__form__btn__text {
     font-weight: 600;
@@ -499,4 +502,15 @@ html, body {
 
 a {
   text-decoration: none;
+  font-size: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  a {
+    font-size: 14px;
+  }
+}
+
+a, a:hover, a:visited {
+  color: #386cbee3;
 }

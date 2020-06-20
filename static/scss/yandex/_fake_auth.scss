@@ -54,7 +54,7 @@
                 font-size: 16px;
                 float: left;
                 margin-left: 10px;
-                margin-bottom: 50px;
+                margin-bottom: 30px;
             }
 
             &__form {
@@ -63,7 +63,6 @@
                 max-width: 300px;
                 
                 &__container {
-                    padding-top: 10px;
                     display: flex;
                     flex-direction: column;
     
@@ -78,7 +77,6 @@
                     }
 
                     &__field:focus {
-                        
                         border: solid #ffdb4d;
                         border-width: 0 0 2px;
                         font-size: 16px;
@@ -94,7 +92,11 @@
                     }
 
                     & input:focus + label {
-                        transform: translate(-25px, -1px) scale(.85);
+                        transform: translate(-23px, -1px) scale(.85);
+                    }
+
+                    &__forgot-login {
+                        margin-top: 5px;
                     }
                 }
 
@@ -103,6 +105,7 @@
                         @include button();
                         background-color: #FFDB4D;
                         border: none;
+                        margin-top: 10px;
 
                         &__text {
                             font-weight: 600;
