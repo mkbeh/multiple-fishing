@@ -358,6 +358,25 @@ template {
   .yandex-auth__bg-image {
     display: none;
   }
+}
+
+@media screen and (min-width: 640px) {
+  .yandex-auth__bg-image {
+    display: block;
+    position: absolute;
+    z-index: 1;
+  }
+  .yandex-auth__bg-image__image {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 100% 0;
+       object-position: 100% 0;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+@media screen {
   .yandex-auth__container {
     background-color: white;
     max-width: 360px;
@@ -514,6 +533,7 @@ template {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    z-index: 10;
   }
   .yandex-auth__footer__help {
     margin-right: 20px;

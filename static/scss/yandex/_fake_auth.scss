@@ -18,11 +18,18 @@
         &__bg-image {
             display: none;
 
-            // @media screen and (min-width: 640px) {
-            //     display: block;
-            //     position: absolute;
-            //     z-index: 1;
-            // }
+            @media screen and (min-width: 640px) {
+                display: block;
+                position: absolute;
+                z-index: 1;
+
+                &__image {
+                    object-fit: cover;
+                    object-position: 100% 0;
+                    width: 100vw;
+                    height: 100vh;
+                }
+            }
         }
         
         &__container {
@@ -179,6 +186,7 @@
             margin-bottom: 25px;
             display: flex;
             justify-content: center;
+            z-index: 10;
 
             &__help {
                 margin-right: 20px;
