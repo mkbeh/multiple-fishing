@@ -94,7 +94,8 @@ $boxShadowColor: rgba(0, 0, 0, 0.56);
             }
 
             .loader {
-                position: fixed; 
+                position: absolute; 
+                top: 250px;
                 left: 50%;
                 margin-left: -20px;
                 z-index: 999;
