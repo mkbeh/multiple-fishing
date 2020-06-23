@@ -384,7 +384,26 @@ template {
     padding-top: 25px;
     padding-bottom: 25px;
     padding: 25px 15px;
+    margin: 0 auto;
   }
+}
+
+@media screen and (min-height: 768px) and (orientation: landscape), screen and (min-height: 1024px) {
+  .yandex-auth__container {
+    margin: auto auto;
+    -webkit-box-shadow: 0px 0px 34px 0px rgba(125, 120, 125, 0.56);
+            box-shadow: 0px 0px 34px 0px rgba(125, 120, 125, 0.56);
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .yandex-auth__container {
+    -webkit-box-shadow: 0px 0px 34px 0px rgba(125, 120, 125, 0.56);
+            box-shadow: 0px 0px 34px 0px rgba(125, 120, 125, 0.56);
+  }
+}
+
+@media screen {
   .yandex-auth__container__header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -534,6 +553,15 @@ template {
             justify-content: center;
     z-index: 10;
   }
+}
+
+@media screen and (orientation: landscape) {
+  .yandex-auth__footer {
+    margin-top: 30px;
+  }
+}
+
+@media screen {
   .yandex-auth__footer__help {
     margin-right: 20px;
     color: black;
@@ -552,6 +580,12 @@ template {
 html, body {
   height: 100%;
   overflow: hidden;
+}
+
+@media screen and (max-height: 767px) and (orientation: landscape) {
+  html, body {
+    overflow: auto;
+  }
 }
 
 a {

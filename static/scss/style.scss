@@ -12,6 +12,10 @@
 html, body{
   height: 100%;
   overflow: hidden;
+
+  @media screen and (max-height: 767px) and (orientation: landscape) {
+    overflow: auto;
+  }
 }
 
 

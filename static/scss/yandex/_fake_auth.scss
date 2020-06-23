@@ -19,8 +19,6 @@
             display: none;
 
             @media screen and (min-width: 1024px) {
-                // also add lower resolution (orient album)
-
                 display: block;
                 position: absolute;
                 z-index: 1;
@@ -41,6 +39,16 @@
             padding-top: 25px;
             padding-bottom: 25px;
             padding: 25px 15px;
+            margin: 0 auto;
+
+            @media screen and (min-height: 768px) and (orientation: landscape), screen and (min-height: 1024px) {
+                margin: auto auto;
+                box-shadow: 0px 0px 34px 0px rgba(125,120,125,0.56);
+            }
+
+            @media screen and (orientation: landscape) {
+                box-shadow: 0px 0px 34px 0px rgba(125,120,125,0.56);
+            }
             
             &__header {
                 display: flex;
@@ -188,6 +196,10 @@
             display: flex;
             justify-content: center;
             z-index: 10;
+
+            @media screen and (orientation: landscape) {
+                margin-top: 30px;
+            }
 
             &__help {
                 margin-right: 20px;
