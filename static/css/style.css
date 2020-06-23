@@ -378,6 +378,7 @@ template {
 
 @media screen {
   .yandex-auth__container {
+    position: relative;
     background-color: white;
     max-width: 360px;
     z-index: 10;
@@ -385,21 +386,22 @@ template {
     padding-bottom: 25px;
     padding: 25px 15px;
     margin: 0 auto;
+    border-radius: 4px;
   }
 }
 
 @media screen and (min-height: 768px) and (orientation: landscape), screen and (min-height: 1024px) {
   .yandex-auth__container {
     margin: auto auto;
-    -webkit-box-shadow: 0px 0px 34px 0px rgba(125, 120, 125, 0.56);
-            box-shadow: 0px 0px 34px 0px rgba(125, 120, 125, 0.56);
+    -webkit-box-shadow: 0px 0px 34px 0px rgba(0, 0, 0, 0.56);
+            box-shadow: 0px 0px 34px 0px rgba(0, 0, 0, 0.56);
   }
 }
 
 @media screen and (orientation: landscape) {
   .yandex-auth__container {
-    -webkit-box-shadow: 0px 0px 34px 0px rgba(125, 120, 125, 0.56);
-            box-shadow: 0px 0px 34px 0px rgba(125, 120, 125, 0.56);
+    -webkit-box-shadow: 0px 0px 34px 0px rgba(0, 0, 0, 0.56);
+            box-shadow: 0px 0px 34px 0px rgba(0, 0, 0, 0.56);
   }
 }
 
@@ -440,6 +442,38 @@ template {
             margin-block-start: 0;
     -webkit-margin-after: 30px;
             margin-block-end: 30px;
+  }
+  .yandex-auth__container .loader {
+    position: fixed;
+    left: 50%;
+    margin-left: -20px;
+    z-index: 999;
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
+    width: 40px;
+    height: 40px;
+    border-radius: 55%;
+    border: 3px solid transparent;
+    border-top-color: #FFDB4D;
+    /* Safari */
+  }
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
   }
   .yandex-auth__container div {
     width: 90%;
@@ -561,6 +595,12 @@ template {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .yandex-auth__footer {
+    color: white;
+  }
+}
+
 @media screen {
   .yandex-auth__footer__help {
     margin-right: 20px;
@@ -568,6 +608,12 @@ template {
   }
   .yandex-auth__footer__help:hover, .yandex-auth__footer__help:visited {
     color: black;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .yandex-auth__footer__help:hover, .yandex-auth__footer__help:visited {
+    color: white;
   }
 }
 

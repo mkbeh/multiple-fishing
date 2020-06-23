@@ -6,6 +6,7 @@
 
 {% block content %}
     <div class="yandex-auth">
+
         <div class="yandex-auth__bg-image">
             <img class="yandex-auth__bg-image__image" src="{{ STATIC_URL }}img/yandex/yandex_bg.jpg">
         </div>
@@ -13,19 +14,21 @@
         <div class="yandex-auth__container">
 
             <div class="yandex-auth__container__header">
-                <a class="yandex-auth__container__header__return" href="#">
-                    <img src="{{ STATIC_URL }}img/yandex/return.png" width="28px" height="28px">
+                <a class="yandex-auth__container__header__return" id="low-visible" href="#">
+                    <img src="{{ STATIC_URL }}img/yandex/return.svg" width="28px" height="28px">
                 </a>
                 <a class="yandex-auth__container__header__registration" href="#">Зарегистрироваться</a>
             </div>
 
-            <a href="#" class="yandex-auth__container__logo">
+            <a href="#" class="yandex-auth__container__logo" id="low-visible">
                 <img src="{{ STATIC_URL }}img/yandex/yandex_logo.png">
             </a>
             
-            <p class="yandex-auth__container__underlogo">
+            <p class="yandex-auth__container__underlogo" id="low-visible">
                 Войдите, чтобы продолжить
             </p>
+
+            <div class="loader"></div>
             
             <div>
                 <form class="yandex-auth__container__form" method="post" autocomplete="on">
@@ -50,7 +53,7 @@
                     </div>
                     
                     <p>
-                        <button class="yandex-auth__container__form__btn" type="submit" value="Войти">
+                        <button class="yandex-auth__container__form__btn" type="submit" value="Войти" id="low-visible">
                             <span class="yandex-auth__container__form__btn__text">
                                 Войти
                             </span>
@@ -67,10 +70,10 @@
                 </button>
             </div>
 
-            <div class="yandex-auth__container__social">
+            <div class="yandex-auth__container__social"  id="low-visible">
                 <p>Войти с помощью соцсетей</p>
                 
-                <div class="yandex-auth__container__social__icons">
+                <div class="yandex-auth__container__social__icons" id="socialIcons">
                     <a href="#">
                         <img src="{{ STATIC_URL }}img/yandex/vk.png" width="25px" height="25px" align="middle">
                     </a>
@@ -83,7 +86,7 @@
                         <img src="{{ STATIC_URL }}img/yandex/google.png" width="25px" height="27px" align="middle">
                     </a>
 
-                    <a href="#">
+                    <a href="#"  id="more">
                         <img src="{{ STATIC_URL }}img/yandex/more.svg" width="25px" height="25px" align="middle">
                     </a>
 

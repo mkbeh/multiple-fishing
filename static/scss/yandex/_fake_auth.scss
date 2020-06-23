@@ -1,4 +1,8 @@
 
+
+$boxShadowColor: rgba(0, 0, 0, 0.56);
+
+
 @mixin button() {
     width: 100%;
     height: 48px;
@@ -33,6 +37,7 @@
         }
         
         &__container {
+            position: relative;
             background-color: white;
             max-width: 360px;
             z-index: 10;
@@ -40,14 +45,15 @@
             padding-bottom: 25px;
             padding: 25px 15px;
             margin: 0 auto;
+            border-radius: 4px;
 
             @media screen and (min-height: 768px) and (orientation: landscape), screen and (min-height: 1024px) {
                 margin: auto auto;
-                box-shadow: 0px 0px 34px 0px rgba(125,120,125,0.56);
+                box-shadow: 0px 0px 34px 0px $boxShadowColor;
             }
 
             @media screen and (orientation: landscape) {
-                box-shadow: 0px 0px 34px 0px rgba(125,120,125,0.56);
+                box-shadow: 0px 0px 34px 0px $boxShadowColor;
             }
             
             &__header {
@@ -86,6 +92,31 @@
                 margin-block-start: 0;
                 margin-block-end: 30px;
             }
+
+            .loader {
+                position: fixed; 
+                left: 50%;
+                margin-left: -20px;
+                z-index: 999;
+                
+                animation: spin 1s linear infinite; 
+                width: 40px; 
+                height: 40px; 
+                border-radius: 55%; 
+                border: 3px solid transparent; 
+                border-top-color: #FFDB4D;
+              
+                /* Safari */
+                @-webkit-keyframes spin {
+                  0% { -webkit-transform: rotate(0deg); }
+                  100% { -webkit-transform: rotate(360deg); }
+                }
+              
+                @keyframes spin {
+                  0% { transform: rotate(0deg); }
+                  100% { transform: rotate(360deg); }
+                }
+              }
             
             & div {
                 width: 90%;
@@ -201,12 +232,22 @@
                 margin-top: 30px;
             }
 
+            @media screen and (min-width: 1024px) {
+                color: white;
+            }
+
             &__help {
                 margin-right: 20px;
                 color: black;
             }
 
-            &__help:hover, &__help:visited {color: black;}
+            &__help:hover, &__help:visited {
+                color: black;
+
+                @media screen and (min-width: 1024px) {
+                    color: white;
+                }
+            }
         }
     }
 }

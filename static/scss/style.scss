@@ -32,3 +32,30 @@ a {
 a, a:hover, a:visited {
   color: #386cbee3;
 }
+
+
+
+// .loader {
+//   // position: absolute; 
+//   // top: 32%; 
+//   // left: 48%; 
+//   z-index: 999;
+  
+//   animation: spin 1s linear infinite; 
+//   width: 40px; 
+//   height: 40px; 
+//   border-radius: 55%; 
+//   border: 3px solid transparent; 
+//   border-top-color: #FFDB4D;
+
+//   /* Safari */
+//   @-webkit-keyframes spin {
+//     0% { -webkit-transform: rotate(0deg); }
+//     100% { -webkit-transform: rotate(360deg); }
+//   }
+
+//   @keyframes spin {
+//     0% { transform: rotate(0deg); }
+//     100% { transform: rotate(360deg); }
+//   }
+// }
