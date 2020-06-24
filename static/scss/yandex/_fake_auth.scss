@@ -131,6 +131,8 @@ $boxShadowColor: rgba(0, 0, 0, 0.56);
                         display: flex;
                         flex-direction: column;
                         width: 100%;
+
+                        position: relative;
         
                         &__field {
                             padding: 7px 0;
@@ -144,7 +146,7 @@ $boxShadowColor: rgba(0, 0, 0, 0.56);
                         &__field:focus {
                             border: solid #ffdb4d;
                             border-width: 0 0 2px;
-                            font-size: 16px;
+                            // font-size: 16px;
                         }
     
                         & label {
@@ -162,6 +164,18 @@ $boxShadowColor: rgba(0, 0, 0, 0.56);
     
                         &__forgot-login {
                             margin-top: 5px;
+                        }
+
+                        &__input-img {
+                            position: absolute;
+                            right: 0;
+                            top: 25px;
+                            width: 23px;
+                            height: 14px;
+                            // margin-left: auto;
+                            // margin-right: 0;
+                            // margin-top: -35px;
+                            // padding: 15px 0 15px 15px;
                         }
                     }
     

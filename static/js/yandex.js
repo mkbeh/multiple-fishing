@@ -65,11 +65,34 @@ document.querySelectorAll('.input').forEach(item => {
     item.addEventListener('blur', event => {
         let label = item.nextElementSibling;
         
-    if (item.value) {
-        label.style.transform = 'translate(-23px, -1px) scale(.85)';
-    } else {
-        label.style.transform = '';
-        label.style.transform = 'translateY(25px); scale(1)';
-    }
+        if (item.value) {
+            label.style.transform = 'translate(-23px, -1px) scale(.85)';
+        } else {
+            label.style.transform = '';
+            label.style.transform = 'translateY(25px); scale(1)';
+        }
     })
   })
+
+
+// --- SHOW/HIDE PASSWORD.
+let pwdEye = document.querySelector('.pwdEye');
+let pwdInput = document.getElementById('input2');
+
+
+function setPwdEyeStyle(inputType, path, height, opacity) {
+    pwdInput.type = inputType;
+    pwdEye.setAttribute('src', path);
+    pwdEye.style.height = height + 'px';
+    pwdEye.style.opacity = opacity;
+}
+
+
+
+pwdEye.addEventListener('click', function() {
+    if (pwdInput.type == 'password') {
+        setPwdEyeStyle('text', '/static/img/yandex/pwd_eye_closed.png', 18, 0.3)
+    } else {
+        setPwdEyeStyle('password', '/static/img/yandex/pwd_eye_opened.png', 14, 1)
+    }
+})
