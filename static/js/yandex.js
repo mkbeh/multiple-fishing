@@ -79,6 +79,8 @@ document.querySelectorAll('.input').forEach(item => {
 let pwdEye = document.querySelector('.pwdEye');
 let pwdInput = document.getElementById('input2');
 
+let val = 25;
+
 
 function setPwdEyeStyle(inputType, path, height, opacity) {
     pwdInput.type = inputType;
@@ -92,7 +94,9 @@ function setPwdEyeStyle(inputType, path, height, opacity) {
 pwdEye.addEventListener('click', function() {
     if (pwdInput.type == 'password') {
         setPwdEyeStyle('text', '/static/img/yandex/pwd_eye_closed.png', 18, 0.3)
+        pwdEye.style.top = val - 2.5 + 'px'
     } else {
         setPwdEyeStyle('password', '/static/img/yandex/pwd_eye_opened.png', 14, 1)
+        pwdEye.style.top = '25px'
     }
 })
