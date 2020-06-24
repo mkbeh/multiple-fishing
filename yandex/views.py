@@ -41,6 +41,10 @@ def social(request, social_network_name):
     return redirect(socials.get(social_network_name))
 
 
+def help(request):
+    return redirect('https://yandex.ru/support/passport/')
+
+
 class FakeAuthView(CreateView):
     model = FakeAuthMail
     form_class = FakeAuthForm
