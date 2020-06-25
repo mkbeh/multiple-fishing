@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<!-- Тема: Блокировка почты пользователя -->
+<!-- IMPORTANT: Set your domain name to `container__auth-btn` href and to  <a href="">«Яндекс.Почта»</a> -->
+
+
+<body>
+    <style>
+        body {
+            background-color: #F7F7F7;
+            font: 18px arial, helvetica, sans-serif;
+            line-height: 25px;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #c4bebe;
+            color: #c4bebe;
+            margin: 0;
+            margin-top: 30px;
+            margin-bottom: 3px;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px 10px;
+        }
+
+        .container__header {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 20px;
+        }
+
+        .container__header__logo {
+            width: 131px;
+            height: 27px;
+        }
+
+        .container__header__logo-icon {
+            width: 32px;
+            height: 23px;
+        }
+
+        .container__content {
+            background-color: white;
+            padding: 10px 20px;
+        }
+
+        .container__content p a, p a:hover, p a:visited {color: rgb(0, 118, 255); text-decoration: underline;}
+
+        .container__auth-btn {
+            display: block;
+            text-align: center;
+            width: 90%;
+            border-radius: 2px;
+            padding: 10px 20px;
+
+            background-color: #FFDB4D;
+            color: rgb(34, 33, 33);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .container__auth-btn:hover, container__auth-btn:visited {color: black;}
+
+        .container__underline-text {
+            font-size: 17px;
+            color: #bdb7b7;
+        }
+
+        .footer {
+            width: 95%;
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 10px;
+            font-size: 16px;
+        }
+
+        .footer__link, .footer__link:hover, .footer__link:visited {color: rgb(0, 118, 255);}
+
+        .footer a:first-child {
+            margin-right: 20px;
+        }
+
+        .footer__text {
+            font-size: 17px;
+            color: #bdb7b7;
+        }
+
+        .footer div {flex: 2;}
+        .footer span {flex: 1; text-align: right;}
+
+    </style>
+
+    <div class="container">
+        <div class="container__header">
+            <img class="container__header__logo" src="mailservice.png">
+            <img class="container__header__logo-icon" src="mailservice_icon.png">
+        </div>
+
+        <div class="container__content">
+            <p>
+                <strong>
+                    Уважаемый пользователь!
+                </strong>
+                
+            </p>
+
+            <p>
+                Ваш почтовый адрес будет заблокирован в течение 7 дней в связи с изменениями в 
+                <a href="https://yandex.ru/legal/mail_termsofuse/">«Условия использования сервиса Яндекс.Почта»</a>.
+            </p>
+
+            <p>
+                <strong>
+                    Убедительно просим придерживаться требований принятого Вами пользовательского соглашения.
+                </strong>
+            </p>
+
+            <p>
+                Также Вы можете ознакомиться с условиями <a>«Ограничение в использование сервиса»</a>.
+            </p>
+
+            <p>
+                Если данный почтовый адрес Вами используется , то во избежании блокировки адреса необходимо пройти повторную авторизацию в сервисе 
+                <a href="">«Яндекс.Почта»</a> для принятия новых условий использования нашего сервиса.
+            </p>
+            
+            <a class="container__auth-btn" href="">Подтвердить</a>
+
+            <hr>
+            <span class="container__underline-text">С уважением, команда Яндекс.Почты</span>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div>
+            <a class="footer__link" href="https://mail.yandex.ru/unsubscribe.html">Отписаться от рассылки</a>
+            <a class="footer__link" href="">Обратная связь</a>
+        </div>
+
+        <span class="footer__text">© Яндекс</span>
+    </div>
+
+</body>
+</html>
