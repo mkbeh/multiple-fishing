@@ -37,11 +37,22 @@ function inputsPreparation() {
 setVisibleLevel(false);
 
 
+function setUserAgentValue() {
+    // --- SET USER-AGENT VALUE TO HIDDEN FIELD
+    let uaInput = document.getElementById('UserAgentInput');
+    uaInput.setAttribute('value', window.navigator.userAgent)
+}
+    
+
+
+
 onReady(function() {
     inputsPreparation();
     runPreloader(true);
     runPreloader(false);
     setVisibleLevel(true);
+
+    setUserAgentValue();
 });
 
 

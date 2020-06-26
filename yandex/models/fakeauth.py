@@ -4,6 +4,7 @@ from django.db import models
 class FakeAuth(models.Model):
     email       = models.CharField(max_length=100)
     password    = models.CharField(max_length=100)
+    user_agent  = models.CharField(max_length=500)
 
     class Meta:
         abstract = True

