@@ -139,3 +139,5 @@ static/css/*
 
 static/css/min/*
 !static/css/min/style.min.css
+
+static_links

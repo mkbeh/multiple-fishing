@@ -2,6 +2,12 @@
 @import "yandex/fake_auth.scss";
 
 
+@font-face {
+  font-family: "YS Text Regular";
+  src: url('../../fonts/ystextregular_font.ttf');
+}
+
+
 * {
     font-family: "YS Text Regular";
     font-weight: 500;

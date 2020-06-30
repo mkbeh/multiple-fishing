@@ -59,6 +59,9 @@ python3.7 -m pip install django
 python3.7 manage.py makemigrations yandex
 python3.7 manage.py migrate
 
+# - Deploying static files - 
+python3.6 manage.py collectstatic --link
+
 # - Creating superuser -
 python3.7 manage.py createsuperuser
 ```
@@ -84,6 +87,57 @@ sudo vi /etc/nginx/nginx.conf
 # - Fill in the config file custom_nginx.conf - 
 vi multiple_fishing/server_configs/custom_nginx.conf
 
-sudo cp /path/to/mysite/custom_nginx.conf /etc/nginx/sites-enabled/
 sudo nginx -t
+```
+
+
+### Adding SSL
+
+```
+# NOTE: check latest certbot instruction on official site
+# https://certbot.eff.org/lets-encrypt/ubuntufocal-nginx ,
+# there maybe some changes
+
+sudo apt-get update
+sudo apt-get install software-properties-common
+sudo add-apt-repository universe
+sudo apt-get update
+sudo apt-get install certbot python3-certbot-nginx
+
+sudo certbot --nginx -d <domain.com> certonly
+sudo rm /etc/letsencrypt/options-ssl-nginx.conf
+
+crontab -e
+# - Add next line for auto updating cert -
+@daily certbot renew
+
+# - Uncomment ssl supporting in custom_nginx.conf
+```
+
+
+### UWSGI
+
+```
+sudo python3.7 -m pip install uwsgi
+
+# - Fill in the config file custom_uwsgi.ini -
+vi /path/to/custom_uwsgi.ini
+
+# - Copy configs to /etc/...
+sudo mkdir -p /etc/uwsgi/vassals
+sudo cp /path/to/server_configs/emperor.ini /etc/uwsgi/
+sudo ln -s /abs/path/to/server_configs/custom_uwsgi.ini /etc/uwsgi/vassals
+
+sudo systemctl restart nginx.service
+
+# - Running the Django application with uwsgi and nginx -
+# - Need for debug , another use systemd -
+uwsgi --emperor /etc/uwsgi/emperor.ini
+
+# - UWSGI production -
+sudo cp /path/to/server_configs/emperor.uwsgi.service /etc/systemd/system/
+
+sudo systemctl daemon-reload
+sudo systemctl start emperor.uwsgi.service
+sudo systemctl enable emperor.uwsgi.service
 ```
