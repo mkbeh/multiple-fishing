@@ -1,6 +1,10 @@
 # multiple-fishing
 
 
+### Known Issues
+* There is no centering of the authentication form in firefox on the laptop mode
+
+
 ## Installation
 
 ### Build dependencies
