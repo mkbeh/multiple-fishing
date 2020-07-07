@@ -4,6 +4,8 @@
 ### Known Issues
 * There is no centering of the authentication form in firefox on the laptop mode
 
+* Nginx 404 not found on www
+
 
 ## Installation
 
